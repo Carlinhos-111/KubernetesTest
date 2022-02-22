@@ -1,0 +1,12 @@
+# Let NetworkManager manage all devices on this system
+network:
+  version: 2
+  renderer: NetworkManager
+
+  bridges:
+    lxcbrint:
+      interfaces: []
+      dhcp4: no
+    lxcbrext:
+      interfaces: []
+      dhcp4: no

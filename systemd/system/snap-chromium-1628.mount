@@ -1,0 +1,14 @@
+[Unit]
+Description=Mount unit for chromium, revision 1628
+Before=snapd.service
+After=zfs-mount.service
+
+[Mount]
+What=/var/lib/snapd/snaps/chromium_1628.snap
+Where=/snap/chromium/1628
+Type=squashfs
+Options=nodev,ro,x-gdu.hide,x-gvfs-hide
+LazyUnmount=yes
+
+[Install]
+WantedBy=multi-user.target
